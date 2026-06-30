@@ -349,9 +349,9 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="text-2xl lg:text-3xl font-extrabold text-white select-none">
-                    <Counter value={500} trigger={startCount} suffix="+" />
+                    <Counter value={10} trigger={startCount} suffix=" K+" />
                   </div>
-                  <div className="text-xs lg:text-sm text-white/70 font-medium leading-tight mt-0.5">Proyectos Exitosos</div>
+                  <div className="text-xs lg:text-sm text-white/70 font-medium leading-tight mt-0.5">Eventos Realizados</div>
                 </div>
               </div>
               {/* Stat 3 */}
@@ -409,9 +409,9 @@ export default function HomePage() {
             </div>
             <div>
               <div className="text-xl font-extrabold text-white select-none">
-                <Counter value={500} trigger={startCount} suffix="+" />
+                <Counter value={10} trigger={startCount} suffix=" K+" />
               </div>
-              <div className="text-xs text-white/60 font-medium leading-tight">Proyectos</div>
+              <div className="text-xs text-white/60 font-medium leading-tight">Eventos</div>
             </div>
           </div>
           <motion.div 
@@ -739,14 +739,17 @@ export default function HomePage() {
                 return (
                   <div
                     key={`${value.title}-${i}`}
-                    className="w-[280px] md:w-[320px] flex-shrink-0 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-[1.03] flex flex-col justify-between"
+                    className="w-[340px] md:w-[420px] flex-shrink-0 bg-gradient-to-br from-white/12 via-white/4 to-transparent border border-white/15 backdrop-blur-md rounded-3xl p-6 md:p-8 transition-all duration-300 hover:from-white/18 hover:to-white/6 hover:border-white/25 hover:scale-[1.03] flex flex-col justify-between shadow-xl"
                   >
                     <div>
-                      <div className="w-12 h-12 rounded-xl bg-brand-accent/15 flex items-center justify-center mb-5 text-brand-accent-light">
-                        <Icon className="w-6 h-6" />
+                      {/* Icon & Title container */}
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-14 h-14 rounded-2xl bg-brand-accent/15 flex items-center justify-center text-brand-accent-light flex-shrink-0">
+                          <Icon className="w-7 h-7" />
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-extrabold text-white leading-tight">{value.title}</h3>
                       </div>
-                      <h3 className="text-lg font-bold text-white mb-2">{value.title}</h3>
-                      <p className="text-white/60 text-sm leading-relaxed whitespace-normal">
+                      <p className="text-white/70 text-base md:text-lg leading-relaxed whitespace-normal">
                         {value.description}
                       </p>
                     </div>

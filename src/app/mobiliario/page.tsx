@@ -35,6 +35,17 @@ const fadeInUp = {
   }),
 };
 
+// Helper function to extract and format product name from image URL
+const getProductNameFromUrl = (url: string) => {
+  if (!url || url.startsWith("http")) return ""; // Ignore external urls if they don't look clean
+  const parts = url.split("/");
+  const filenameWithExt = parts[parts.length - 1];
+  const filename = filenameWithExt.split(".")[0];
+  const decoded = decodeURIComponent(filename).replace(/[-_]/g, " ").trim();
+  return decoded.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+};
+
+
 const categories = [
   { label: "Todos", icon: FiGrid },
   { label: "Sillas", icon: FaChair },
@@ -201,18 +212,18 @@ export default function MobiliarioPage() {
       {/* ============ FILTERS ============ */}
       <section className="sticky top-20 z-30 bg-white/95 backdrop-blur-lg border-b border-brand-light shadow-sm">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-2 py-4 overflow-x-auto no-scrollbar">
+          <div className="flex flex-wrap items-center justify-center gap-3 py-5">
             {categories.map((cat) => (
               <button
                 key={cat.label}
                 onClick={() => setActiveCategory(cat.label)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-base font-semibold whitespace-nowrap transition-all ${
                   activeCategory === cat.label
                     ? "bg-brand-blue text-white shadow-md shadow-brand-blue/20"
                     : "bg-brand-light/60 text-brand-dark/70 hover:bg-brand-light hover:text-brand-dark"
                 }`}
               >
-                <cat.icon className="w-4 h-4" />
+                <cat.icon className="w-5 h-5" />
                 {cat.label}
               </button>
             ))}
@@ -243,6 +254,14 @@ export default function MobiliarioPage() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
+                    {/* Product Name Badge */}
+                    {getProductNameFromUrl(product.image) && (
+                      <div className="absolute bottom-4 left-4 z-10 pointer-events-none">
+                        <span className="bg-brand-blue text-white text-sm font-extrabold px-5 py-2.5 rounded-xl shadow-lg border border-white/15 uppercase tracking-wider">
+                          {getProductNameFromUrl(product.image)}
+                        </span>
+                      </div>
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="bg-white text-brand-blue px-5 py-2 rounded-full text-sm font-semibold shadow-lg">

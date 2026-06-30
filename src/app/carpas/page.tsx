@@ -17,6 +17,16 @@ const fadeInUp = {
   }),
 };
 
+// Helper function to extract and format product name from image URL
+const getProductNameFromUrl = (url: string) => {
+  if (!url) return "";
+  const parts = url.split("/");
+  const filenameWithExt = parts[parts.length - 1];
+  const filename = filenameWithExt.split(".")[0];
+  const decoded = decodeURIComponent(filename).replace(/[-_]/g, " ").trim();
+  return decoded.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+};
+
 // Simple Carousel Component for Stands with multiple images
 function StandImageCarousel({ images, alt, onImageClick }: { images: string[]; alt: string, onImageClick: (images: string[], index: number) => void }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,6 +43,8 @@ function StandImageCarousel({ images, alt, onImageClick }: { images: string[]; a
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
+  const productName = getProductNameFromUrl(images[currentIndex]);
+
   return (
     <div className="relative w-full h-full group/carousel cursor-pointer" onClick={() => onImageClick(images, currentIndex)}>
       <Image
@@ -41,6 +53,14 @@ function StandImageCarousel({ images, alt, onImageClick }: { images: string[]; a
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"
       />
+      {/* Product Name Badge */}
+      {productName && (
+        <div className="absolute bottom-4 left-4 z-10 pointer-events-none">
+          <span className="bg-brand-blue text-white text-sm font-extrabold px-5 py-2.5 rounded-xl shadow-lg border border-white/15 uppercase tracking-wider">
+            {productName}
+          </span>
+        </div>
+      )}
       {images.length > 1 && (
         <>
           <button
@@ -55,7 +75,7 @@ function StandImageCarousel({ images, alt, onImageClick }: { images: string[]; a
           >
             <FiChevronRight className="w-6 h-6" />
           </button>
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+          <div className="absolute bottom-4 right-4 flex justify-center gap-2 z-20">
             {images.map((_, idx) => (
               <div
                 key={idx}
@@ -136,6 +156,13 @@ export default function CarpasPage() {
                   className="object-contain"
                   quality={100}
                 />
+                
+                {/* Lightbox Product Name Badge */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+                  <span className="bg-brand-blue text-white text-sm md:text-base font-extrabold px-6 py-3.5 rounded-xl shadow-2xl border border-white/20 tracking-wider whitespace-nowrap">
+                    {getProductNameFromUrl(selectedItem.images[selectedItem.index])}
+                  </span>
+                </div>
               </div>
 
               {/* Carousel Controls (only if multiple images) */}
@@ -210,18 +237,18 @@ export default function CarpasPage() {
       {/* ============ FILTERS ============ */}
       <section className="sticky top-20 z-30 bg-white/95 backdrop-blur-lg border-b border-brand-light shadow-sm">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-2 py-4 overflow-x-auto no-scrollbar">
+          <div className="flex items-center justify-start md:justify-center gap-3 py-5 overflow-x-auto no-scrollbar">
             {categories.map((cat) => (
               <button
                 key={cat.label}
                 onClick={() => setActiveCategory(cat.label)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-base font-semibold whitespace-nowrap transition-all ${
                   activeCategory === cat.label
                     ? "bg-brand-blue text-white shadow-md shadow-brand-blue/20"
                     : "bg-brand-light/60 text-brand-dark/70 hover:bg-brand-light hover:text-brand-dark"
                 }`}
               >
-                <cat.icon className="w-4 h-4" />
+                <cat.icon className="w-5 h-5" />
                 {cat.label}
               </button>
             ))}

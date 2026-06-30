@@ -84,6 +84,20 @@ export const stands: Stand[] = [
     ],
     description: "Variedad de acabados para superficies de escenarios, incluyendo madera barnizada, laminados, acrílicos con iluminación LED, plástico modular y rampas de acceso.",
   },
+  {
+    title: "Otros tipos de Tarima",
+    category: "Tarimas",
+    dimensions: "Personalizable",
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Otros Tipos de Tarima/tarima-normal.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Otros Tipos de Tarima/tarima-espejo.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Otros Tipos de Tarima/tarima-carro.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Otros Tipos de Tarima/tarima-carro-2.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Otros Tipos de Tarima/tarima-vidrio.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Otros Tipos de Tarima/piso-tarima-exhibicion.webp"
+    ],
+    description: "Galería de montajes y configuraciones especiales de tarimas, tales como plataformas para vehículos, superficies con acabado espejo de alta reflexión, tarimas tradicionales y escenarios a nivel de piso.",
+  },
 
   // ESTRUCTURAS
   {
@@ -104,14 +118,21 @@ export const stands: Stand[] = [
     title: "Estructura Octanorm",
     category: "Estructuras",
     dimensions: "Personalizable",
-    image: placeholderImg,
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Estructuras/Estructura Octanorm/estructura-octanorm.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Estructuras/Estructura Octanorm/estructura-octanorm-2.webp"
+    ],
     description: "El sistema por excelencia para ferias comerciales y exposiciones, permitiendo montajes rápidos, modulares y uniformes.",
   },
   {
     title: "Graderías",
     category: "Estructuras",
     dimensions: "Personalizable",
-    image: placeholderImg,
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Estructuras/Graderias/estructuras-graderias.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Estructuras/Graderias/estructuras-graderias-2.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Estructuras/Graderias/estructuras-graderias-3.webp"
+    ],
     description: "Montaje seguro y cómodo para eventos deportivos o espectáculos que requieran acomodación masiva de público.",
   },
   {
