@@ -48,7 +48,7 @@ const services = [
     title: "Carpas",
     description:
       "Carpas tipo pagoda, a dos aguas, hangares y domos especiales para garantizar la cobertura de tu evento al aire libre.",
-    image: "/imagenes/productosyservicios/p3.jpg",
+    image: "/imagenes/productosyservicios/p3.webp",
     href: "/carpas",
     color: "from-emerald-600 to-emerald-800",
   },
@@ -57,7 +57,7 @@ const services = [
     title: "Estructuras y Tarimas",
     description:
       "Sistemas de truss, escenarios certificados, pasarelas y techos estructurados para producciones masivas.",
-    image: "/imagenes/productosyservicios/p4.jpg",
+    image: "/imagenes/productosyservicios/p4.webp",
     href: "/estructuras",
     color: "from-purple-600 to-purple-800",
   },
@@ -66,7 +66,7 @@ const services = [
     title: "Mobiliario",
     description:
       "Alquiler de sillas, mesas, salas lounge, barras de bar y mobiliario de diseño exclusivo para tus invitados.",
-    image: "/imagenes/productosyservicios/p2.jpeg",
+    image: "/imagenes/productosyservicios/p2.webp",
     href: "/mobiliario",
     color: "from-amber-600 to-amber-800",
   },
@@ -75,7 +75,7 @@ const services = [
     title: "Ferias y Stands",
     description:
       "Diseño, fabricación y montaje de stands personalizados para ferias y exposiciones comerciales de alto impacto.",
-    image: "/imagenes/productosyservicios/p1.png",
+    image: "/imagenes/productosyservicios/p1.webp",
     href: "/stands",
     color: "from-blue-600 to-blue-800",
   },
@@ -84,7 +84,7 @@ const services = [
     title: "Atracciones",
     description:
       "Alquiler de inflables gigantes, juegos mecánicos y atracciones interactivas ideales para activaciones familiares y corporativas.",
-    image: "/imagenes/productosyservicios/p5.jpg",
+    image: "/imagenes/productosyservicios/p5.webp",
     href: "/atracciones",
     color: "from-rose-600 to-rose-800",
   },
@@ -131,17 +131,17 @@ const values = [
 
 
 const clientLogos = [
-  "Marca 1.jpg",
-  "Marca 2.jpg",
-  "Marca 3.jpg",
-  "Marca 4.jpg",
-  "Marca 5.jpg",
-  "Marca 6.jpg",
-  "Marca 7.jpg",
-  "Marca 8.jpg",
-  "Marca 9.jpg",
-  "Marca 10.jpg",
-  "Marca 11.jpg",
+  "Marca 1.webp",
+  "Marca 2.webp",
+  "Marca 3.webp",
+  "Marca 4.webp",
+  "Marca 5.webp",
+  "Marca 6.webp",
+  "Marca 7.webp",
+  "Marca 8.webp",
+  "Marca 9.webp",
+  "Marca 10.webp",
+  "Marca 11.webp",
 ];
 
 function Counter({
@@ -265,7 +265,7 @@ export default function HomePage() {
             className="absolute -top-[15%] inset-x-0 w-full h-[130%]"
           >
             <Image
-              src="/imagenes/Hero/GSP-3.jpg"
+              src="/imagenes/Hero/GSP-3.webp"
               alt="Evento Multiespacios"
               fill
               className="object-cover"
@@ -533,7 +533,7 @@ export default function HomePage() {
               {/* Image Half */}
               <div className="relative h-[300px] lg:h-full lg:min-h-[450px] overflow-hidden group">
                 <Image
-                  src="/imagenes/Eventos/eventos.jpg"
+                  src="/imagenes/Eventos/eventos.webp"
                   alt="Producción de Eventos"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -600,7 +600,7 @@ export default function HomePage() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-brand-light aspect-[4/3] md:aspect-auto md:h-[480px] group bg-brand-light/35">
                 <Image
-                  src="/imagenes/lanzamiento/tobogan_Arcoiris.png"
+                  src="/imagenes/lanzamiento/tobogan_Arcoiris.webp"
                   alt="Tobogán Arcoíris"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

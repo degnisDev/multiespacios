@@ -336,7 +336,7 @@ export default function EstructurasPage() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/imagenes/2_Estructuras_y_tarimas/tarimas.jpg"
+            src="/imagenes/2_Estructuras_y_tarimas/tarimas.webp"
             alt="Estructuras y Tarimas Multiespacios"
             fill
             className="object-cover"

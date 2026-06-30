@@ -20,12 +20,12 @@ export const categories: Category[] = [
   { label: "Estructuras", icon: FiMaximize },
 ];
 
-const placeholderImg = "/imagenes/2_Estructuras_y_tarimas/tarimas.jpg";
+const placeholderImg = "/imagenes/2_Estructuras_y_tarimas/tarimas.webp";
 
 export const stands: Stand[] = [
   // TARIMAS
   {
-    title: "Tarima interior tipo Americana",
+    title: "Tarima tipo Americana",
     category: "Tarimas",
     dimensions: "Personalizable",
     image: [placeholderImg, placeholderImg],
@@ -39,7 +39,7 @@ export const stands: Stand[] = [
     description: "Plataforma sofisticada con superficie de vidrio, perfecta para eventos de gala, pasarelas y activaciones de alto nivel.",
   },
   {
-    title: "Tarima Exterior",
+    title: "Tarima Tradicional",
     category: "Tarimas",
     dimensions: "Personalizable",
     image: [placeholderImg, placeholderImg, placeholderImg],

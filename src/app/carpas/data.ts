@@ -26,14 +26,14 @@ export const stands: Stand[] = [
     title: "Carpa Pagoda",
     category: "Pagodas",
     dimensions: "Personalizable",
-    image: "/imagenes/1_carpas/carpa_pagoda.webp",
+    image: "/imagenes/1_carpas/carpa-pagoda.webp",
     description: "Carpa de diseño elegante y techo puntiagudo, perfecta para eventos al aire libre, recepciones y activaciones de marca pequeñas.",
   },
   {
     title: "Carpa Polo",
     category: "Polos",
     dimensions: "Personalizable",
-    image: "/imagenes/1_carpas/carpa_polo.webp",
+    image: "/imagenes/1_carpas/carpa-polo.webp",
     description: "Estructura tradicional soportada por postes centrales, ofreciendo un amplio espacio cubierto con un toque clásico y festivo.",
   },
   {
@@ -41,7 +41,7 @@ export const stands: Stand[] = [
     category: "Pabellones",
     dimensions: "Personalizable",
     image: [
-      "/imagenes/1_carpas/carpa_pabellón.webp",
+      "/imagenes/1_carpas/carpa-pabellón.webp",
       "/imagenes/1_carpas/Demostración Pabellón 1.webp",
       "/imagenes/1_carpas/Demostración Pabellón 2.webp"
     ],
