@@ -28,29 +28,61 @@ export const stands: Stand[] = [
     title: "Tarima tipo Americana",
     category: "Tarimas",
     dimensions: "Personalizable",
-    image: [placeholderImg, placeholderImg],
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Americana/tarima-americana.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Americana/tarima-certificada.webp"
+    ],
     description: "Tarima elegante y resistente para espacios interiores, ideal para presentaciones, conferencias y eventos corporativos.",
   },
   {
     title: "Tarima en Vidrio",
     category: "Tarimas",
     dimensions: "Personalizable",
-    image: placeholderImg,
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Vidrio/tarima-vidrio.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Vidrio/tarima-vidrio-2.webp"
+    ],
     description: "Plataforma sofisticada con superficie de vidrio, perfecta para eventos de gala, pasarelas y activaciones de alto nivel.",
   },
   {
     title: "Tarima Tradicional",
     category: "Tarimas",
     dimensions: "Personalizable",
-    image: [placeholderImg, placeholderImg, placeholderImg],
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Tradicional/tarima-tradicional.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Tradicional/tarima-tradicional-2.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Tradicional/tarima-tradicional-3.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima Tradicional/tarima-tradicional-4.webp"
+    ],
     description: "Estructura robusta y segura diseñada para soportar las condiciones del clima en conciertos y eventos masivos al aire libre.",
   },
   {
     title: "Tarima tipo Scaffold",
     category: "Tarimas",
     dimensions: "Personalizable",
-    image: placeholderImg,
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima tipo Scaffold/tarima-scaffold.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima tipo Scaffold/tarima-scaffold-2.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Tarima tipo Scaffold/tarima-scaffold-3.webp"
+    ],
     description: "Sistema modular altamente versátil que permite configuraciones complejas y alturas ajustables según las necesidades del escenario.",
+  },
+  {
+    title: "Pisos de Tarimas",
+    category: "Tarimas",
+    dimensions: "Personalizable",
+    image: [
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-diseno.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-madera.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-laminado.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-laminado-2.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-leds.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-ajedrez.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-impreso.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-plastico.webp",
+      "/imagenes/2_Estructuras_y_tarimas/Tarimas/Pisos de Tarimas/piso-tarima-rampa-discapacitado.webp"
+    ],
+    description: "Variedad de acabados para superficies de escenarios, incluyendo madera barnizada, laminados, acrílicos con iluminación LED, plástico modular y rampas de acceso.",
   },
 
   // ESTRUCTURAS
