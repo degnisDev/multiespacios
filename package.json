@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/convert-images.js",
+    "prebuild": "node -e \"if (require('fs').existsSync('./scripts/convert-images.js')) require('./scripts/convert-images.js')\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
